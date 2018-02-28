@@ -1,0 +1,20 @@
+[
+    {
+        "title": "电子技术",
+        "order": 1,
+        "icon": "fa-link",
+        "url": "/categories/electech.html"
+    },
+    {
+        "title": "Win32",
+        "order": 2,
+        "icon": "fa-link",
+        "url": "/categories/win32.html"
+    },
+    {
+        "title": ".Net",
+        "order": 3,
+        "icon": "fa-link",
+        "url": "/categories/dotnet.html"
+    }
+]

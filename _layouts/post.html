@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% include header.html %}
+
+<!-- Main -->
+<div id="main">
+	<!-- Post -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2>{{- page.title -}}</h2>
+				<p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date: "%Y-%m-%d" -}}</p>
+			</header>
+			<div class="markdown-body">{{ content }}</div>
+	  </div>
+	</article>
+</div>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
