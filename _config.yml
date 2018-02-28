@@ -12,7 +12,7 @@ timezone: Asia/Shanghai
 encoding: "utf-8"
 baseurl: ""
 blogbaseurl: "/blog"
-url: "https://liyuqihxc.github.io"
+url: "http://liyuqihxc.github.io"
 exclude: ['Gemfile','Gemfile.lock']
 permalink: /:year/:month/:day/:title/
 defaults:
