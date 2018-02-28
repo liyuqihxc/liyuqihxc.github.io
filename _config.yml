@@ -44,7 +44,7 @@ timezone: Asia/Shanghai
 encoding: "utf-8"
 # You'll want to customize url and baseurl for your own site:
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://liyuqihxc.github.io" # the base hostname & protocol for your site
+url: "https://liyuqihxc.github.io" # the base hostname & protocol for your site
 exclude: ['Gemfile','Gemfile.lock']
 permalink: /:year/:month/:day/:title/
 defaults:
