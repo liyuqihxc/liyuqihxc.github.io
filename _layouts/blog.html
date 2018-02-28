@@ -5,11 +5,7 @@ layout: default
 {% assign _posts = site.posts | sort: 'date' | reverse %}
 {% include header.html scrolly_nav=_all_categories %}
 <!-- Main -->
-<div id="main">
-	{% if page.content != '' %}
-		{% include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content %}
-	{% endif %}
-	
+<div id="main">	
 	{% if page.category != '' and site.categories[page.category] %}
 		<!-- 指定分类的文章 -->
 		{% assign _posts = site.categories[page.category] | sort: 'date' | reverse %}

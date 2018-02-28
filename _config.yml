@@ -10,21 +10,29 @@ lang: zh-Hans
 repository: liyuqihxc/liyuqihxc.github.io
 timezone: Asia/Shanghai
 encoding: "utf-8"
-baseurl: "/blog"
+baseurl: ""
+blogbaseurl: "/blog"
 url: "https://liyuqihxc.github.io"
 exclude: ['Gemfile','Gemfile.lock']
 permalink: /:year/:month/:day/:title/
 defaults:
   -
     scope:
-      path: "categories" # an empty string means all files in the project
+      path: "blog/categories" # an empty string means all files in the project
     values:
       hide: true
       layout: "blog"
+  -
+    scope:
+      path: "blog/_posts"
+    values:
+      hide: true
+      layout: post
+      permalink: /blog/:year/:month/:day/:title/
 
 # Social settings
 facebook_url:
-github_url: https://github.com/liyuqihxc
+github_url: http://github.com/liyuqihxc
 googleplus_url:
 instagram_url:
 linkedin_url:
@@ -33,7 +41,10 @@ slack_url:
 twitter_url:
 
 # Google Analytics Tracking ID goes here:
-google_analytics:
+google_analytics: UA-114908873-1
+
+plugins:
+#  - jekyll-redirect-from
 
 markdown: kramdown
 kramdown:

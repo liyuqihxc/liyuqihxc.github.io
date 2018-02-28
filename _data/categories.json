@@ -3,18 +3,18 @@
         "title": "电子技术",
         "order": 1,
         "icon": "fa-link",
-        "url": "/categories/electech.html"
+        "url": "/blog/categories/electech"
     },
     {
         "title": "Win32",
         "order": 2,
         "icon": "fa-link",
-        "url": "/categories/win32.html"
+        "url": "/blog/categories/win32"
     },
     {
         "title": ".Net",
         "order": 3,
         "icon": "fa-link",
-        "url": "/categories/dotnet.html"
+        "url": "/blog/categories/dotnet"
     }
 ]

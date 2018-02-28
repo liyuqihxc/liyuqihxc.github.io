@@ -1,7 +1,6 @@
 ---
 title: 借助GitHub Pages配合Jekyll构建个人博客站点
 author: 石榴骑士
-layout: post
 icon: fa-lightbulb-o
 ---
 

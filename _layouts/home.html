@@ -4,10 +4,6 @@ layout: default
 {% include header.html %}
 <!-- Main -->
 <div id="main">
-	{% if page.content != '' %}
-		{% include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content %}
-	{% endif %}
-
 	{% assign _sections = site.sections | where:'title','Intro' %}
 	{% assign _intro = _sections[0] %}
 	{% include section.html title=_intro.title photo=_intro.cover-photo photo-alt=_intro.cover-photo-alt auto-header=_intro.auto-header content=_intro.content %}
