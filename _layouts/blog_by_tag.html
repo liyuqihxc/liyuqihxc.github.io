@@ -1,0 +1,32 @@
+---
+layout: blog
+category: tags
+title: Articles associés à la balise
+---
+
+<!-- Compute the translation of the tag -->
+{% for data_tag in site.data.tags %}
+    {% if data_tag.slug == page.tag %}
+		{% assign tag_title = data_tag.name %}
+	{% endif %}
+{% endfor %}
+
+<div class="call-out">
+	<h1>
+		Tag: {{ tag_title }}
+	</h1>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		{% if site.tags[page.tag] %}
+        {% for post in site.tags[page.tag] %}
+            {% include blog/post_short.html %}
+        {% endfor %}
+    {% else %}
+        <p>Aucun article associé à cette balise</p>
+    {% endif %}
+	</div>
+	<div class="col-md-4">
+	  {% include blog/navbar.html %}
+	</div>
+</div>

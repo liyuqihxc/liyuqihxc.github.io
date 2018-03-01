@@ -1,0 +1,159 @@
+{% if site.metatheme.rss %}
+<li>
+	<a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" title="{{ site.metatheme.str_rss_follow }}">
+		<i class="fa fa-fw fa-rss"><span class="icon-title padded-md">{{ site.metatheme.str_rss_follow }}</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.email_address %}
+<li>
+	<a href="mailto:{{ site.metatheme.email_address }}" title="{{ site.metatheme.str_email }}">
+		<i class="fa fa-fw fa-envelope"><span class="icon-title padded-md">{{ site.metatheme.str_email }}</span></i>
+	</a>	
+</li>
+{% endif %}
+
+{% if site.metatheme.behance %}
+<li>
+	<a href="https://www.behance.net/{{ site.metatheme.behance }}" title="{{ site.metatheme.str_follow_on }} Behance">
+		<i class="fa fa-fw fa-behance"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Behance</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.bitbucket %}
+<li>
+	<a href="https://bitbucket.org/{{ site.metatheme.bitbucket }}" title="{{ site.metatheme.str_follow_on }} Bitbucket">
+		<i class="fa fa-fw fa-bitbucket"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Bitbucket</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.dribbble %}
+<li>
+	<a href="https://dribbble.com/{{ site.metatheme.dribbble }}" title="{{ site.metatheme.str_follow_on }} Dribbble">
+		<i class="fa fa-fw fa-dribbble"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Dribbble</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.facebook %}
+<li>
+	<a href="https://www.facebook.com/{{ site.metatheme.facebook }}" title="{{ site.metatheme.str_follow_on }} Facebook">
+		<i class="fa fa-fw fa-facebook"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Facebook</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.flickr %}
+<li>
+	<a href="https://www.flickr.com/photos/{{ site.metatheme.flickr }}" title="{{ site.metatheme.str_follow_on }} Flickr">
+		<i class="fa fa-fw fa-flickr"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Flickr</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.github %}
+<li>
+	<a href="https://github.com/{{ site.metatheme.github }}" title="{{ site.metatheme.str_follow_on }} GitHub">
+		<i class="fa fa-fw fa-github"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} GitHub</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.google_plus %}
+<li>
+	<a href="https://plus.google.com/{{ site.metatheme.google_plus }}" title="{{ site.metatheme.str_follow_on }} Google+">
+		<i class="fa fa-fw fa-google-plus"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Google+</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.instagram %}
+<li>
+	<a href="http://instagram.com/{{ site.metatheme.instagram }}" title="{{ site.metatheme.str_follow_on }} Instagram">
+		<i class="fa fa-fw fa-instagram"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Instagram</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.linkedin %}
+<li>
+	<a href="{{ site.metatheme.linkedin }}" title="{{ site.metatheme.str_follow_on }} LinkedIn">
+		<i class="fa fa-fw fa-linkedin"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} LinkedIn</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.pinterest %}
+<li>
+	<a href="http://www.pinterest.com/{{ site.metatheme.pinterest }}" title="{{ site.metatheme.str_follow_on }} Pinterest">
+		<i class="fa fa-fw fa-pinterest"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Pinterest</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.reddit %}
+<li>
+	<a href="https://www.reddit.com/user/{{ site.metatheme.reddit }}" title="{{ site.metatheme.str_follow_on }} Reddit">
+		<i class="fa fa-fw fa-reddit"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Reddit</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.soundcloud %}
+<li>
+	<a href="https://soundcloud.com/{{ site.metatheme.soundcloud }}" title="{{ site.metatheme.str_follow_on }} SoundCloud">
+		<i class="fa fa-fw fa-soundcloud"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} SoundCloud</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.stack_exchange %}
+<li>
+	<a href="{{ site.metatheme.stack_exchange }}" title="{{ site.metatheme.str_follow_on }} Stack Exchange">
+		<i class="fa fa-fw fa-stack-exchange"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Stack Exchange</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.steam %}
+<li>
+	<a href="http://steamcommunity.com/id/{{ site.metatheme.steam }}" title="{{ site.metatheme.str_follow_on }} Steam">
+		<i class="fa fa-fw fa-steam"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Steam</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.tumblr %}
+<li>
+	<a href="http://{{ site.metatheme.tumblr }}.tumblr.com/" title="{{ site.metatheme.str_follow_on }} Tumblr">
+		<i class="fa fa-fw fa-tumblr"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Tumblr</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.twitter %}
+<li>
+	<a href="https://twitter.com/{{ site.metatheme.twitter }}" title="{{ site.metatheme.str_follow_on }} Twitter">
+		<i class="fa fa-fw fa-twitter"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} Twitter</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.wordpress %}
+<li>
+	<a href="https://{{ site.metatheme.wordpress }}.wordpress.com/" title="{{ site.metatheme.str_follow_on }} WordPress">
+		<i class="fa fa-fw fa-wordpress"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} WordPress</span></i>
+	</a>
+</li>
+{% endif %}
+
+{% if site.metatheme.youtube %}
+<li>
+	<a href="https://www.youtube.com/user/{{ site.metatheme.youtube }}" title="{{ site.metatheme.str_follow_on }} YouTube">
+		<i class="fa fa-fw fa-youtube"><span class="icon-title padded-md">{{ site.metatheme.str_follow_on }} YouTube</span></i>
+	</a>
+</li>
+{% endif %}

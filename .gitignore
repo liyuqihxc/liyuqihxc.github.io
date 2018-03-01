@@ -1,4 +1,12 @@
-/_site
-*.gem
+_site
 .sass-cache
-Gemfile.lock
+.DS_Store
+*/.DS_Store
+
+categories/.DS_Store
+
+categories/.DS_Store
+
+categories/.DS_Store
+
+categories/lesmainsdanslecambouis/.DS_Store

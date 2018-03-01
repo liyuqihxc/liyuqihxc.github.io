@@ -1,56 +1,89 @@
-title: 石榴骑士的个人博客
-subtitle: 面向工资编程
-description: >- # this means to ignore newlines until "baseurl:"
-  
-author: 石榴骑士
-email: liyuqihxc@gmail.com
-avatar: assets/images/avatar.jpg
-
-lang: zh-Hans
+# SITE CONFIGURATION
+baseurl: "" # the subpath of your site, e.g. /blog/
+blogbaseurl: "/blog"
+careerurl: "/career"
+images: "/blog/img"
+skill_images: "/img/skills"
+frontage_images: "/img"
+url: "http://liyuqihxc.github.io" # the base hostname & protocol for your site
+encoding: utf-8
 repository: liyuqihxc/liyuqihxc.github.io
 timezone: Asia/Shanghai
-encoding: "utf-8"
-baseurl: ""
-blogbaseurl: "/blog"
-url: "http://liyuqihxc.github.io"
+lang: zh-CN
 exclude: ['Gemfile','Gemfile.lock']
-permalink: /:year/:month/:day/:title/
+
 defaults:
   -
     scope:
-      path: "blog/categories" # an empty string means all files in the project
+      path: ""
+      type: "posts"
     values:
-      hide: true
-      layout: "blog"
-  -
-    scope:
-      path: "blog/_posts"
-    values:
-      hide: true
-      layout: post
-      permalink: /blog/:year/:month/:day/:title/
+      enable_comments: false
 
-# Social settings
-facebook_url:
-github_url: http://github.com/liyuqihxc
-googleplus_url:
-instagram_url:
-linkedin_url:
-pinterest_url:
-slack_url:
-twitter_url:
+# metatheme-SPECIFIC CONFIGURATION
+metatheme:
+  # Meta
+  title: 石榴骑士的小站
+  subtitle: 面向 ¥ 编程
+  author: 石榴骑士
+  avatar: avatar.jpg
+  gravatar: # Email MD5 hash
+  description: "" # used by search engines
 
-# Google Analytics Tracking ID goes here:
-google_analytics: UA-114908873-1
+  # Header and footer text
+  footer_text: Powered by <a href="http://jekyllrb.com">Jekyll</a>
 
-plugins:
-#  - jekyll-redirect-from
+  # Icons
+  rss: false
+  email_address: liyuqihxc@gmail.com
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr:
+  github: "liyuqihxc"
+  google_plus:
+  instagram:
+  linkedin:
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:
+  steam:
+  tumblr:
+  twitter: 
+  wordpress:
+  youtube:
 
+  # Scripts
+  google_analytics: UA-114908873-1
+  katex: true # Enable if using math markup
+
+  # Localization strings
+  str_follow_on: "关注"
+  str_rss_follow: "订阅 RSS"
+  str_email: "Email"
+  str_next: "Next"
+  str_prev: "Previous"
+  str_continue_reading: "Read More"
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+
+# PAGINATION
+permalink: /blog/:categories/:year/:month/:day/:title.html
+paginate: 10
+paginate_path: "blog/:num"
+paginate_category: "blog"
+plugins: 
+  - jekyll-paginate
+
+# BUILD SETTINGS
 markdown: kramdown
 kramdown:
-  input: GFM 
-  syntax_highlighter: rouge
+  input: GFM
 highlighter: rouge
-excerpt_separator: "<!--excerpt-->"
-
-collections: [sections]
+sass:
+  sass_dir: _sass
+  style: :compressed
+excerpt_separator: <!--excerpt-->

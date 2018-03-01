@@ -1,3 +1,3 @@
-我的个人博客：http://liyuqihxc.github.io ，欢迎 Star 和 Fork。
+我的个人博客：http://liyuqihxc.github.io
 
-[jekyll-theme-prologue](http://jekyllthemes.org/themes/jekyll-theme-prologue/)
+源码Fork自[remidoolaeghe](https://github.com/remidoolaeghe/remidoolaeghe.github.io)，修改了一部分内容。

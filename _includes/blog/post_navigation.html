@@ -1,0 +1,10 @@
+{% if page.previous %}
+	<div class="post-nav-buttons container-fluid">
+		<div class="row"><a href="{{ page.previous.url }}"><< 上一篇: {{ page.previous.title }}</a></div>
+	</div>
+{% endif %}
+{% if page.next %}
+	<div class="post-nav-buttons container-fluid">
+		<div class="row"><a href="{{ page.next.url }}"><< 上一篇: {{ page.next.title }}</a></div>
+	</div>
+{% endif %}

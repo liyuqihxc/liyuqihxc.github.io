@@ -1,0 +1,377 @@
+.frontage{
+	.home{
+		@extend .striped-section-reverse;
+		margin-top: 56px;
+
+		#photograph{
+			width: 200px;
+			height: 200px;
+		}
+		
+		#pitch{
+			font-size: 1.8em;
+			font-style: italic;
+		}
+			
+		.social-link{
+			@extend .padded-md;
+			height: 80px;
+		}
+			
+		h1, h2, h3, h4 {
+			font-family: 'Roboto Slab', serif;
+		}
+		
+		h1{
+			padding-bottom: 10px;
+			margin-bottom: 30px;
+		}
+		
+		h4 {
+			margin: 20px 0 10px 0;
+		}
+		
+		ol {
+			li{ 
+				padding:8px; 
+				border-left: 1px solid $dark-grey;
+			}
+			
+		}
+		
+		ul > li{
+			@extend .checked-bullet-li;
+		}
+		
+		#punchline{
+			background-color: $deep-blue;
+			color: white;
+			padding: 100px;
+		
+			#punchline-problem{
+				font-size: 3em;
+				font-family: 'Slabo 27px', serif;
+			}
+			
+			#punchline-solution{
+				font-size: 2em;
+				font-style: italic;
+			}
+		}
+		
+		@media(max-width: $width-xs-max){
+			#punchline{
+				padding: 20px 0;
+			
+				#punchline-problem{
+					font-size: 1.5em;
+				}
+				
+				#punchline-solution{
+					font-size: 1.2em;
+				}
+			}
+		}
+			
+		@media(min-width: $width-sm-min){
+			.how-it-works-step{
+				padding-top: 30px;
+			}
+		}
+		
+		.blog{
+			h3{
+				height: 2em;
+				font-size: 1.3em;
+			}
+			
+			h4 {
+				height: 2em;
+			}
+		
+			.feature-image{
+				max-width: 150px;
+				height: auto;
+				padding: 5px 10px 5px 0;
+			}
+		}
+		
+		.emphasis-action{
+			font-size: 2em;
+			margin-top: 30px;
+			border-top: 1px solid $grey;
+			border-bottom: 1px solid $grey;
+		}		
+	}
+
+	.skills{
+		@extend .striped-section;
+		margin-top: 56px;
+
+		.skill-item{	
+			display: inline-block;
+			padding: 10px;
+			vertical-align: middle;
+		
+			img{
+				max-height: 100px;
+				max-width: 200px;
+			}
+		}
+		
+		h2, h3 {
+			@extend .underline-title;
+			margin: 30px auto;
+		}
+		
+		h4{
+			margin: 0;
+		}
+		
+		.mission-header{
+			padding: 15px 0;
+		}
+		
+		@media(max-width: $width-xs-max){
+			.mission-header{
+			
+				.left-align{
+					text-align: left;
+				}
+				
+				.right-align{
+					text-align: right;
+				}
+			}
+		}
+		
+		li{
+			@extend .checked-bullet-li;
+		}
+		
+		.society-logo{
+			max-height: 50px;
+			max-width: 150px;
+		}
+		
+		.veille-img{
+			max-height: 100px;
+			max-width: 200px;
+		}
+		
+		.school-logo{
+			height: 100px;
+		}
+		
+		#contents{
+			margin-top: 20px;
+			width: 100%;
+			
+			.btn{
+				border:0;
+				width: 25%;
+				font-size: 0.8em;
+				text-transform: uppercase;
+				font-family: 'Orbitron', sans-serif;
+			}
+		}
+		
+		@media(max-width: $width-xs-max){
+			#contents{			
+				.btn{
+					padding: 2px;
+					font-size: 0.55em;
+				}
+			}
+		}
+	}
+
+	.checked-bullet-li{
+		list-style-type: none;
+		
+		&:before{
+			font-family: 'FontAwesome';
+			content: '\f00c';
+			margin: 0 10px 0 0;
+			color: $check-color;
+			font-size: 1.2em;
+		}
+	}
+
+	.offers{
+		@extend .striped-section-reverse;
+		margin-top: 56px;
+
+		tr {
+			td{
+				width: 25%;
+			}
+		
+			ul > li{
+				@extend .checked-bullet-li;
+			}
+			
+			td.disabled, &.disabled {
+				* {
+					color: $grey;
+				}
+			}
+			
+			.price-cell{
+				padding: 20px 0 50px 0;
+			}
+		}
+			
+		table{
+		}
+		
+		th{
+			text-align: center;
+		}
+		
+		td {
+			
+		}
+		
+		td:nth-child(3){
+			background-color: #dff0d8;
+		}
+		
+		tfoot{
+			td{
+				text-align: center;
+				padding: 50px 0;
+			}
+		}
+		
+		.lead{
+			font-size: 1.6em;
+			font-style: italic;
+		}
+				
+		.table{
+			margin-bottom: 0;
+		}
+			
+		#freelancerepublik-widget{			
+			background-color: orange;
+			color: white;
+			border:	1px solid orange;
+			border-radius: 5px;
+			
+			padding: 2px 8px 2px 0;
+			
+			img{
+				width: 20px;
+				vertical-align: bottom;
+			}
+			
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	
+	/* Due to a bug in bootstrap, the fixed navbar takes more than 100% in width, so we transform it into an absolute positionned navbar */
+	@media(max-width: $width-xs-max){
+		.navbar-fixed-top{
+			position: absolute;
+		}
+	}
+
+	.navbar {
+		text-align: center;
+		background-color: $navbar-background;
+		width: 100%;
+		border: 0;
+		margin: 0;
+		border-bottom: 6px solid $deep-blue;
+				
+		.navbar-nav{
+			width: 100%;
+		}
+		
+		ul{
+			background-color: $navbar-background;
+			
+			li{
+				width: 20%;
+				text-transform: uppercase;
+				font-family: 'Orbitron', sans-serif;
+								
+				&:hover{
+					background-color: rgba(232,239,244,1);
+				}
+				
+				a{
+					background-color: $navbar-background;
+					color: white;
+				}
+			}
+			
+			@media(max-width: $width-xs-max){
+				li{	
+					background: $frontage-header-background;
+					
+					&:hover{
+						background: $frontage-header-background;
+					}
+				}
+				
+				.navbar-collapse{
+					background: $frontage-header-background;
+				}
+			}
+			
+			@media(max-width: $width-xs-max){
+				li{
+					width: 100%;
+				}
+			}
+		}
+	}
+	
+	footer{
+		padding: 10px 0;
+		background-color: $navbar-background;
+		border-top: 6px solid $deep-blue;
+		color: white;
+		
+		li {
+			display-style: none;
+			display: inline;
+			
+			i{
+				font-size: 3em;
+				
+				/* To hide the title of the social icons in the footer of the frontage */
+				.icon-title{
+					display: none;
+				}
+			}
+		}		
+	}
+	
+	.fa-big{
+		font-size: 150px;
+		padding: 30px;
+	}
+	
+	.fa-md{
+		font-size: 80px;
+		padding: 30px;
+	}
+	
+	.fa-small{
+		font-size: 30px;
+		padding: 10px;
+	}
+	
+	.call-to-action{
+		color: white;
+		font-size: 1.2em;
+		border-radius: 25px;
+		padding: 10px 50px;
+		background: linear-gradient(to bottom, #3F8DBD 0%, #3F8DBD 50%, $deep-blue 50%, $deep-blue 100%);
+	}
+}

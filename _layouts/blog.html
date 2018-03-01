@@ -1,29 +1,15 @@
----
-layout: default
----
-{% assign _all_categories = site.data.categories | sort: 'order' %}
-{% assign _posts = site.posts | sort: 'date' | reverse %}
-{% include header.html scrolly_nav=_all_categories %}
-<!-- Main -->
-<div id="main">	
-	{% if page.category != '' and site.categories[page.category] %}
-		<!-- 指定分类的文章 -->
-		{% assign _posts = site.categories[page.category] | sort: 'date' | reverse %}
-	{% endif %}
+<!DOCTYPE html>
+<html class="{{ site.lang }}">
+  {% include blog/head.html %}
+  <body class="background blog">
+	<a name="top"></a>
 
-	<!-- 文章列表 -->
-	{% for _post in _posts %}
-		{% capture _title %}
-			<a href="{{ _post.url | absolute_url }}">{% if _post.tags contains 'reblog' %}[转载]{% endif %}{{ _post.title }}</a>
-		{% endcapture %}
-		{% capture _subtitle %}
-			{% if _post.author %}{{ _post.author }} | {% endif %}
-			{{ _post.date | date: '%Y-%m-%d' }}
-		{% endcapture %}
-		{% capture _excerpt %}<p>{{ _post.excerpt | strip_html | truncatewords: 100 }}</p>{% endcapture %}
-		{% capture _link %}<a href="{{ _post.url | absolute_url }}">read more</a>{% endcapture %}
-		{% assign _content = _excerpt | append: _link %}
-		{% include section.html title=_title subtitle=_subtitle content=_content %}
-	{% endfor %}
-
-</div>
+  	{% include blog/header.html %}
+    <div class="container">
+		<div class="main">
+			{{ content }}
+		</div>
+    </div>
+    {% include blog/footer.html %}
+  </body>
+</html>

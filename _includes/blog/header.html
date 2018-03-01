@@ -1,0 +1,46 @@
+<header>
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<img style="display: inline-block" id="photograph-small" src="{{ site.baseurl }}/img/{{ site.metatheme.avatar }}" alt="site.metatheme.author"/>	
+				<span class="inline-block">
+					<h1>{{ site.metatheme.title }}</h1>
+					<h2>{{ site.metatheme.subtitle }}</h2>
+				</span>			
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">			
+					<li>
+						<a href="/">首页</a>
+					</li>
+					<li>
+						<a href="{{ site.blogbaseurl }}">博客</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							文章分类
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							{% for category in site.data.categories %}
+							<li>
+								<a href="{{ category.url }}">{{ category.title }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</li>
+					
+					<!-- Social icons from Font Awesome, if enabled -->
+					{% include icons.html %}
+				</ul>
+			</div>
+			
+		</div>
+	</nav>
+</header>

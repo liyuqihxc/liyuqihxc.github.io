@@ -1,0 +1,20 @@
+<div class="share">
+	<span>分享：</span>
+	<a class="share-button" data-toggle="popover" data-placement="top" data-content="分享至新浪微博" href="javascript:void(0)">
+		<i class="fa fa-weibo" aria-hidden="true"></i>
+	</a>
+	<a class="share-button" data-toggle="popover" data-placement="top" data-content="分享至微信" href="javascript:void(0)">
+		<i class="fa fa-weixin" aria-hidden="true"></i>
+	</a>
+</div>
+
+<script>
+	$(function (){
+		$('.share-button').bind('mouseover', function (arg) {
+			$(arg.currentTarget).popover('show');
+		});
+		$('.share-button').bind('mouseleave', function (arg) {
+			$(arg.currentTarget).popover('hide');
+		});
+	});
+</script>

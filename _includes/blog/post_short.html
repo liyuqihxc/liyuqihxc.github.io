@@ -1,0 +1,32 @@
+{% include blog/tag_computer.html %}
+
+<article class="post">          
+	<h1>
+		<a href="{{ post.url | prepend: site.baseurl }}">
+		 {{ post.title }}
+		</a>
+	</h1>
+	{% if post.subtitle %}
+		<h2>{{ post.subtitle }}</h2>
+	{% endif %}
+	<p class="post-date">
+	   {{ post.date | date: "%Y-%m-%d" }} - {{ post.author | default : site.metatheme.author}}
+	</p>
+	<div class="tags">
+		<!-- This value comes from the include tag_computer.html -->
+		{{ tags_content }}
+	</div>
+	<div class="clearfix">
+		{% if post.feature-image %}
+			<img src="{{ site.images }}/{{ post.feature-image }}" class="pull-left margin-right">
+		{% endif %}
+		<div>
+			{{ post.excerpt | truncatewords: 50 | strip_html }}
+		</div>
+	</div>
+	<div class="continue-reading clearfix">
+		<a class="btn btn-primary pull-right" href="{{ post.url | prepend: site.baseurl }}">
+		   {{ site.metatheme.str_continue_reading }}
+		</a>
+	</div>
+</article>
