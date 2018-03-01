@@ -3,7 +3,7 @@ title: 借助GitHub Pages配合Jekyll构建个人博客站点
 author: 石榴骑士
 layout: post
 tags: jekyll github
-feature-image: 2015-04-22-Github_feature.jpeg
+feature-image: 2015-04-22-Github_feature.webp
 ---
 
 ### 目录
