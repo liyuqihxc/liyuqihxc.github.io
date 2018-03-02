@@ -24,7 +24,7 @@ defaults:
 metatheme:
   # Meta
   title: 石榴骑士的小站
-  subtitle: 面向 ¥ 编程
+  subtitle: 面向工资编程
   author: 石榴骑士
   avatar: avatar.jpg
   gravatar: # Email MD5 hash
@@ -57,7 +57,7 @@ metatheme:
 
   # Scripts
   google_analytics: UA-114908873-1
-  katex: true # Enable if using math markup
+  mathjax: true # Enable if using math markup
 
   # Localization strings
   str_follow_on: "关注"
