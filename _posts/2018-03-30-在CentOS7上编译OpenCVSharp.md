@@ -57,6 +57,6 @@ feature-image: 2015-04-22-Github_feature.webp
 
 ### 遇到的坑
 
-&emsp;&emsp;由于缺少一些opencvsharp自带的文件，编译时需要将opencv_files_*/include/opencv2文件夹拷贝到/usr/local/include文件夹中，不需要覆盖已存在的文件。
+&emsp;&emsp;由于缺少一些opencvsharp自带的文件，编译时需要将opencvsharp/opencv_files_*/include/opencv2文件夹拷贝到/usr/local/include文件夹中，不需要覆盖已存在的文件。
 
 &emsp;&emsp;编译完成后生成的libOpenCvSharpExtern.so不能放到类似/usr/local/lib这样的库文件夹而应该跟Nuget包OpenCvSharp3-AnyCPU放在一起：lib\netcoreapp1.0\OpenCvSharp.dll所在的目录。否则无法被.net core找到并加载。
