@@ -3,3 +3,10 @@
 
 - slug: jekyll
   name: Jekyll
+
+- slug: cpp
+  name: c++
+
+- slug: dotnet
+  name: dotnet
+  
