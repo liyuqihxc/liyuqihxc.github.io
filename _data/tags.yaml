@@ -10,3 +10,8 @@
 - slug: dotnet
   name: dotnet
   
+- slug: centos
+  name: CentOS
+
+- slug: git
+  name: Git
