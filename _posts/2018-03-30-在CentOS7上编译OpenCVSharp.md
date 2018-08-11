@@ -23,8 +23,7 @@ feature-image: 2015-04-22-Github_feature.webp
 
 下载、编译CMake的过程
 
-    curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz -o 
-    cmake-3.11.0.tar.gz --progress
+    curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz -o cmake-3.11.0.tar.gz --progress
     tar zxf cmake-3.11.0-Linux-x86_64.tar.gz
     cd cmake-3.11.0
     makdir bin
@@ -38,7 +37,7 @@ feature-image: 2015-04-22-Github_feature.webp
 
     git clone https://github.com/opencv/opencv.git
     cd opencv
-    git checkout 3.4.1
+    git checkout tags/3.4.1
     mkdir bin
     cd bin
     cmake  -DCMAKE_BUILD_TYPE=Release ..
@@ -50,7 +49,7 @@ feature-image: 2015-04-22-Github_feature.webp
 
     git clone https://github.com/shimat/opencvsharp.git
     cd opencvsharp
-    git checkout 3.4.1.20180320
+    git checkout tags/3.4.1.20180320
     mkdir bin
     cd bin
     cmake  -DCMAKE_BUILD_TYPE=Release ..

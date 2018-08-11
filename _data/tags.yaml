@@ -5,8 +5,10 @@
   name: Jekyll
 
 - slug: cpp
-  name: c++
+  name: C++
 
 - slug: dotnet
-  name: dotnet
-  
+  name: Dotnet
+
+- slug: protobuf
+  name: Protobuf

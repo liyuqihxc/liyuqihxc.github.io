@@ -81,7 +81,7 @@ STYLE_MAP.keys()
 
     Liquid Exception: invalid byte sequence in GBK in *****
 
-可以把控制台的代码页改为utf-8在重试
+可以把控制台的代码页改为utf-8再重试
 
     chcp 65001
 
