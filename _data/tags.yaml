@@ -7,8 +7,14 @@
 - slug: cpp
   name: C++
 
-- slug: dotnet
-  name: Dotnet
-
 - slug: protobuf
   name: Protobuf
+
+- slug: dotnet
+  name: dotnet
+  
+- slug: centos
+  name: CentOS
+
+- slug: git
+  name: Git
