@@ -78,4 +78,6 @@ theme: next-6.7.0
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/liyuqihxc/liyuqihxc.github.io.git
+  branch: master
