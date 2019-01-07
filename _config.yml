@@ -87,3 +87,9 @@ deploy:
   type: git
   repo: https://github.com/liyuqihxc/liyuqihxc.github.io.git
   branch: master
+
+algolia:
+  applicationID: 'EM95YYSP04'
+  indexName: 'liyuqihxc.github.io'
+  apiKey: 'afd9a88b3e7a008c9d764e8a3d58980a'
+  chunkSize: 5000

@@ -3,7 +3,7 @@ title: 搬瓦工VPS搭建SS服务器
 date: 2019-01-06 11:58:40
 categories:
 - [操作系统]
-tags: [CentOS]
+tags: [CentOS, Linux]
 ---
 
 ### 目录
