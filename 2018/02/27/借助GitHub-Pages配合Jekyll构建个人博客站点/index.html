@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'EM95YYSP04',
+      apiKey: 'afd9a88b3e7a008c9d764e8a3d58980a',
+      indexName: 'liyuqihxc.github.io',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="目录 Quick Setup Fork 指南 经验和遇到的坑   Quick Setup&amp;emsp;&amp;emsp;Jekyll是基于Ruby的工具，首先需要安装Ruby，Ruby的官方网站可以下载。安装好后会自动弹出命令提示符窗口询问是否安装msys2，因为后面需要用 gem 安装Jekyll，所以这里选择安装 msys2 和 MinGW dev toolchain。之后是gem，gem可以在(ru">
+<meta name="keywords" content="GitHub,Jekyll">
+<meta property="og:type" content="article">
+<meta property="og:title" content="借助GitHub-Pages配合Jekyll构建个人博客站点">
+<meta property="og:url" content="https://liyuqihxc.github.io/2018/02/27/借助GitHub-Pages配合Jekyll构建个人博客站点/index.html">
+<meta property="og:site_name" content="石榴骑士的小站">
+<meta property="og:description" content="目录 Quick Setup Fork 指南 经验和遇到的坑   Quick Setup&amp;emsp;&amp;emsp;Jekyll是基于Ruby的工具，首先需要安装Ruby，Ruby的官方网站可以下载。安装好后会自动弹出命令提示符窗口询问是否安装msys2，因为后面需要用 gem 安装Jekyll，所以这里选择安装 msys2 和 MinGW dev toolchain。之后是gem，gem可以在(ru">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-08T01:33:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="借助GitHub-Pages配合Jekyll构建个人博客站点">
+<meta name="twitter:description" content="目录 Quick Setup Fork 指南 经验和遇到的坑   Quick Setup&amp;emsp;&amp;emsp;Jekyll是基于Ruby的工具，首先需要安装Ruby，Ruby的官方网站可以下载。安装好后会自动弹出命令提示符窗口询问是否安装msys2，因为后面需要用 gem 安装Jekyll，所以这里选择安装 msys2 和 MinGW dev toolchain。之后是gem，gem可以在(ru">
+
+
+
+
+
+
+  <link rel="canonical" href="https://liyuqihxc.github.io/2018/02/27/借助GitHub-Pages配合Jekyll构建个人博客站点/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>借助GitHub-Pages配合Jekyll构建个人博客站点 | 石榴骑士的小站</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">石榴骑士的小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">面向工资编程</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liyuqihxc.github.io/2018/02/27/借助GitHub-Pages配合Jekyll构建个人博客站点/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liyuqihxc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="石榴骑士的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">借助GitHub-Pages配合Jekyll构建个人博客站点
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-02-27 00:00:00" itemprop="dateCreated datePublished" datetime="2018-02-27T00:00:00+08:00">2018-02-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-08 09:33:56" itemprop="dateModified" datetime="2019-01-08T09:33:56+08:00">2019-01-08</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li><a href="#quick-setup">Quick Setup</a></li>
+<li><a href="#fork-指南">Fork 指南</a></li>
+<li><a href="#经验和遇到的坑">经验和遇到的坑</a></li>
+</ul>
+<hr>
+<h3 id="Quick-Setup"><a href="#Quick-Setup" class="headerlink" title="Quick Setup"></a>Quick Setup</h3><p>&emsp;&emsp;Jekyll是基于Ruby的工具，首先需要安装Ruby，<a href="https://www.ruby-lang.org/zh_cn/downloads/" target="_blank" rel="noopener">Ruby的官方网站</a>可以下载。安装好后会自动弹出命令提示符窗口询问是否安装msys2，因为后面需要用 gem 安装Jekyll，所以这里选择安装 <strong>msys2</strong> 和 <strong>MinGW dev toolchain</strong>。之后是gem，gem可以在(rubygems.org)[<a href="https://rubygems.org/pages/download]下载，安装完后重新打开命令提示符，用" target="_blank" rel="noopener">https://rubygems.org/pages/download]下载，安装完后重新打开命令提示符，用</a> <strong>gem install</strong> 命令安装以下几个gem包：</p>
+<table style="text-align: center;">
+  <tr>
+    <td>Jekyll</td>
+    <td>这个不用说了</td>
+  </tr>
+  <tr>
+    <td>kramdown</td>
+    <td>markdown转html</td>
+  </tr>
+  <tr>
+    <td>liquid</td>
+    <td>liquid Template</td>
+  </tr>
+    <tr>
+    <td>github-pages</td>
+    <td>for building Jekyll sites with any GitHub-hosted theme</td>
+  </tr>
+  <tr>
+    <td>tzinfo</td>
+    <td>Ruby Timezone Library</td>
+  </tr>
+  <tr>
+    <td>tzinfo-data</td>
+    <td>为tzinfo提供windows系统上的支持</td>
+  </tr>
+</table>
+
+<p>到这里，所有需要安装的东西就都结束了。</p>
+<h3 id="Fork-指南"><a href="#Fork-指南" class="headerlink" title="Fork 指南"></a>Fork 指南</h3><p>&emsp;&emsp;博客的模板问题有两种选择：直接fork其他人的现成项目，这个最省事基本不用修改；去<a href="http://jekyllthemes.org/" target="_blank" rel="noopener">Jekyll Themes</a>下载模板修改这个最麻烦，博主之前就是打算下载空的模板来修改，现学现卖liquid与Jekyll。弄到半路想想看其实部署个博客不就是来记录自己平常项目的经验经历嘛，这样造轮子完全背离了自己的初衷，干嘛不直接“拿来”个现成的项目呢？</p>
+<p>&emsp;&emsp;在google上乱搜一阵之后发现了个<a href="https://remidoolaeghe.github.io" target="_blank" rel="noopener">全是法文的小站</a>，随便复制几段翻译发现主人是个自由职业的Java程序猿,整个页面的布局还挺符合我的需求，于是直接Fork修改。</p>
+<div class="well">
+    <a href="https://github.com/remidoolaeghe/remidoolaeghe.github.io" target="_blank" rel="noopener">https://github.com/remidoolaeghe/remidoolaeghe.github.io</a>
+</div>
+
+<p>&emsp;&emsp;作者把所有的工作都做好了，基本上不需要做多少修改：页面里用国外CDN的js、css换成了国内的，去掉了自己不需要的页面，评论换成国内能访问的IntenseDebate（速度还是很慢，后面看看能不能换成gitalk），修改了文章页面右侧“相关博文”部分的查找逻辑。轻松完成~</p>
+<h3 id="经验和遇到的坑"><a href="#经验和遇到的坑" class="headerlink" title="经验和遇到的坑"></a>经验和遇到的坑</h3><h4 id="文档："><a href="#文档：" class="headerlink" title="文档："></a>文档：</h4><table>
+  <tr>
+    <td>Jekyll</td>
+    <td><a href="https://jekyllrb.com/docs/home/" target="_blank" rel="noopener">https://jekyllrb.com/docs/home/</a></td>
+  </tr>
+  <tr>
+    <td>liquid</td>
+    <td><a href="https://shopify.github.io/liquid/" target="_blank" rel="noopener">https://shopify.github.io/liquid/</a></td>
+  </tr>
+  <tr>
+    <td>markdown语法</td>
+    <td><a href="http://wowubuntu.com/markdown/index.html" target="_blank" rel="noopener">http://wowubuntu.com/markdown/index.html</a></td>
+  </tr>
+</table>
+
+<p>Jekyll有一个本地的服务器可以用来调试、预览整个博客系统，在命令提示符输入以下命令可以查看jekyll的所有命令选项</p>
+<pre><code>jekyll help
+</code></pre><p>pygments所使用的css文件可以用以下命令来生成</p>
+<pre><code>pygmentize -f html -a .highlight -S vs &gt; pygments.css
+</code></pre><ul>
+<li>-a .highlight指所有css类都具有.highlight这一祖先</li>
+<li>-S vs 指定所需要的样式</li>
+</ul>
+<p>所有的样式可以在Python中使用以下代码查看</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pygments.styles <span class="keyword">import</span> STYLE_MAP</span><br><span class="line">STYLE_MAP.keys()</span><br></pre></td></tr></table></figure>
+<p>实际上GitHub Pages现在已经转为使用Rouge来实现代码高亮了，不过因为Pygments和Rouge两者的样式通用，所以还是可以用Pygments的样式文件。Rouge的使用方法参照命令</p>
+<pre><code>rougify help
+</code></pre><p>本地调试的过程中遇到不少坑，不过都不难解决，只是因为不熟悉liquid模板，修改代码的时候花了一点时间。</p>
+<ul>
+<li>本地调试</li>
+</ul>
+<p>本地调试可以使用命令</p>
+<pre><code>bundle exec jekyll serve
+</code></pre><p>如果输出错误</p>
+<pre><code>Liquid Exception: invalid byte sequence in GBK in *****
+</code></pre><p>可以把控制台的代码页改为utf-8再重试</p>
+<pre><code>chcp 65001
+</code></pre><ul>
+<li>tzinfo</li>
+</ul>
+<p>Ruby的tzinfo库如果在windows系统上使用会报dependency error，bing+google之后找到这么个issue：<a href="https://github.com/aron-bordin/neo-hpstr-jekyll-theme/issues/40" target="_blank" rel="noopener">tzinfo dependency error</a>。</p>
+<p>解决方法是安装tzinfo-data</p>
+<pre><code>gem install tzinfo-data
+</code></pre><p>再在站点根目录的Gemfile里添加一行</p>
+<pre><code>gem &apos;tzinfo-data&apos;
+</code></pre><ul>
+<li>GitHub Pages</li>
+</ul>
+<p>页面生成很快，如果生成出现问题可以等GitHub系统发送邮件到你账户对应的邮箱来查看。博主之前没仔细看GitHub Pages的文档，不知道生成失败会发送邮件，于是做了点无用功在找Bug上。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+          
+            <a href="/tags/Jekyll/" rel="tag"># Jekyll</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/30/在CentOS7上编译OpenCVSharp/" rel="prev" title="在CentOS7上编译OpenCVSharp">
+                在CentOS7上编译OpenCVSharp <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="liyuqihxc">
+            
+              <p class="site-author-name" itemprop="name">liyuqihxc</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/liyuqihxc" title="GitHub &rarr; https://github.com/liyuqihxc" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:liyuqihxc@gmail.com" title="E-Mail &rarr; mailto:liyuqihxc@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Quick-Setup"><span class="nav-number">2.</span> <span class="nav-text">Quick Setup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fork-指南"><span class="nav-number">3.</span> <span class="nav-text">Fork 指南</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#经验和遇到的坑"><span class="nav-number">4.</span> <span class="nav-text">经验和遇到的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文档："><span class="nav-number">4.1.</span> <span class="nav-text">文档：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liyuqihxc</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="https://cdn.bootcss.com/velocity/1.2.1/velocity.min.js"></script>
+
+  
+  <script src="https://cdn.bootcss.com/velocity/1.2.1/velocity.ui.min.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="https://cdn.bootcss.com/instantsearch.js/2.4.1/instantsearch.min.css">
+
+  
+  
+    
+  
+  <script src="https://cdn.bootcss.com/instantsearch.js/2.4.1/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.7.0"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
