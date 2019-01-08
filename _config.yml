@@ -56,13 +56,14 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
-  未分类: uncategorized
+  翻译: translate
   操作系统: os
   .Net: dotnet
   电子技术: embedded
 tag_map:
   C#: csharp
   C++: cpp
+  Visual Studio Code: vscode
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
