@@ -93,3 +93,8 @@ algolia:
   indexName: 'liyuqihxc.github.io'
   apiKey: 'afd9a88b3e7a008c9d764e8a3d58980a'
   chunkSize: 5000
+
+# https://github.com/hexojs/hexo/issues/1388
+marked:
+  gfm: true
+  breaks: false

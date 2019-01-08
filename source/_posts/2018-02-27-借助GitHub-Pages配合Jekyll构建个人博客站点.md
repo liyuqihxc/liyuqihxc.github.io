@@ -17,12 +17,32 @@ tags: [GitHub, Jekyll]
 
 &emsp;&emsp;Jekyll是基于Ruby的工具，首先需要安装Ruby，[Ruby的官方网站](https://www.ruby-lang.org/zh_cn/downloads/)可以下载。安装好后会自动弹出命令提示符窗口询问是否安装msys2，因为后面需要用 gem 安装Jekyll，所以这里选择安装 **msys2** 和 **MinGW dev toolchain**。之后是gem，gem可以在(rubygems.org)[https://rubygems.org/pages/download]下载，安装完后重新打开命令提示符，用 **gem install** 命令安装以下几个gem包：
 
-|Jekyll|这个不用说了|
-|kramdown|markdown转html|
-|liquid|liquid Template|
-|github-pages|for building Jekyll sites with any GitHub-hosted theme|
-|tzinfo|Ruby Timezone Library|
-|tzinfo-data|为tzinfo提供windows系统上的支持|
+<table style="text-align: center;">
+  <tr>
+    <td>Jekyll</td>
+    <td>这个不用说了</td>
+  </tr>
+  <tr>
+    <td>kramdown</td>
+    <td>markdown转html</td>
+  </tr>
+  <tr>
+    <td>liquid</td>
+    <td>liquid Template</td>
+  </tr>
+    <tr>
+    <td>github-pages</td>
+    <td>for building Jekyll sites with any GitHub-hosted theme</td>
+  </tr>
+  <tr>
+    <td>tzinfo</td>
+    <td>Ruby Timezone Library</td>
+  </tr>
+  <tr>
+    <td>tzinfo-data</td>
+    <td>为tzinfo提供windows系统上的支持</td>
+  </tr>
+</table>
 
 到这里，所有需要安装的东西就都结束了。
 
@@ -42,9 +62,20 @@ tags: [GitHub, Jekyll]
 
 #### 文档：
 
-|Jekyll|[https://jekyllrb.com/docs/home/](https://jekyllrb.com/docs/home/)|
-|liquid|[https://shopify.github.io/liquid/](https://shopify.github.io/liquid/)|
-|markdown语法|[http://wowubuntu.com/markdown/index.html](http://wowubuntu.com/markdown/index.html)|
+<table>
+  <tr>
+    <td>Jekyll</td>
+    <td><a href="https://jekyllrb.com/docs/home/">https://jekyllrb.com/docs/home/</a></td>
+  </tr>
+  <tr>
+    <td>liquid</td>
+    <td><a href="https://shopify.github.io/liquid/">https://shopify.github.io/liquid/</a></td>
+  </tr>
+  <tr>
+    <td>markdown语法</td>
+    <td><a href="http://wowubuntu.com/markdown/index.html">http://wowubuntu.com/markdown/index.html</a></td>
+  </tr>
+</table>
 
 Jekyll有一个本地的服务器可以用来调试、预览整个博客系统，在命令提示符输入以下命令可以查看jekyll的所有命令选项
 
