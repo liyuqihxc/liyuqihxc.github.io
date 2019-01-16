@@ -512,7 +512,7 @@ pangu: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+#baidu_analytics: 72e443d3733c5de73a1e76d2127d9325
 
 # Growingio Analytics ID
 # Copyright 2015-2018 GrowingIO, Inc. More info available at https://www.growingio.com
@@ -619,7 +619,7 @@ needmoreshare2:
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-114908873-1
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster
