@@ -64,3 +64,13 @@ $ ssh-add ~/.ssh/id_rsa
 ```bash
 $ ssh -T git@github.com
 ```
+### node.js filesystem watcher报错ENOSPEC
+
+```bash
+# https://github.com/facebook/jest/issues/3254#issuecomment-297214395
+$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
+### 网易云音乐
+
+https://www.zhihu.com/question/277330447/answer/478510195
