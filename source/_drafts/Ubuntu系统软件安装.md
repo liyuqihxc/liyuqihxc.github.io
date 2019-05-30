@@ -74,3 +74,41 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 ### 网易云音乐
 
 https://www.zhihu.com/question/277330447/answer/478510195
+
+### 程序自启动
+
+* 普通权限
+
+按Alt+F2输入gnome-session-properties回车，打开 **启动应用程序首选项** 设置启动程序的命令。
+
+* Root权限
+
+创建文件 **/etc/rc.local** ，加上执行权限(如果需要停用自启动则去掉执行权限)。
+
+```shell
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+sslocal -c /home/user/shadowsocks.json -d start &
+exit 0
+```
+
+```bash
+$ chmod +x /etc/rc.local
+```
+
+### OpenJDK 11
+
+https://blog.csdn.net/qwfys200/article/details/85740990
+https://dzone.com/articles/installing-openjdk-11-on-ubuntu-1804-for-real
+https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
