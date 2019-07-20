@@ -9,7 +9,7 @@ tags: [Ubuntu]
 
 https://blog.csdn.net/qq_24406903/article/details/85011090
 
-* 安装 Shadowsocks
+- 安装 Shadowsocks
 
 ```bash
 $ pip install --upgrade git+https://github.com/shadowsocks/shadowsocks.git@master
@@ -18,7 +18,7 @@ $ pip install --upgrade git+https://github.com/shadowsocks/shadowsocks.git@maste
 $ sslocal -c ~/shadowsocks.json -d start
 ```
 
-* 安装genpac、下载gfwlist文件
+- 安装genpac、下载gfwlist文件
 
 ```bash
 $ sudo pip install genpac
@@ -77,11 +77,11 @@ https://www.zhihu.com/question/277330447/answer/478510195
 
 ### 程序自启动
 
-* 普通权限
+- 普通权限
 
 按Alt+F2输入gnome-session-properties回车，打开 **启动应用程序首选项** 设置启动程序的命令。
 
-* Root权限
+- Root权限
 
 创建文件 **/etc/rc.local** ，加上执行权限(如果需要停用自启动则去掉执行权限)。
 
@@ -112,3 +112,13 @@ $ chmod +x /etc/rc.local
 https://blog.csdn.net/qwfys200/article/details/85740990
 https://dzone.com/articles/installing-openjdk-11-on-ubuntu-1804-for-real
 https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
+https://www.linode.com/docs/development/java/install-java-on-ubuntu-18-04/
+
+- 解决Java桌面程序字体反锯齿问题
+
+在文件 **/etc/environment** 中加上
+
+```
+_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
+```
+
