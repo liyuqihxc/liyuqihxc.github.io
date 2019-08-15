@@ -19,4 +19,8 @@ add-apt-repository ppa:team-gcc-arm-embedded/ppa
 
 #### Windows
 
-### 
+### Build
+
+### Debug
+
+[https://gnutoolchains.com/arm-eabi/openocd/](https://gnutoolchains.com/arm-eabi/openocd/)

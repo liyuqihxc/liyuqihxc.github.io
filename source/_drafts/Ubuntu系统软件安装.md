@@ -71,6 +71,22 @@ $ ssh -T git@github.com
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
+### Nodejs切换版本
+
+```bash
+sudo yarn global add n
+sudo n lts # 也可以用版本号10.16.0
+node -v
+
+# 如过版本号没有变
+export NODE_HOME=/usr/local
+export PATH=$NODE_HOME/bin:$PATH
+export NODE_PATH=$NODE_HOME/lib/node_modules:$PATH
+sudo n
+```
+
+
+
 ### 网易云音乐
 
 https://www.zhihu.com/question/277330447/answer/478510195
